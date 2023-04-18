@@ -73,9 +73,6 @@ body {
     transition: 0.1s all;
 }
 
-.navbar-items a:hover::after {
-    width: 100%;
-}
 
 .mobile-view-icon {
     height: 5vh;
@@ -139,10 +136,6 @@ body {
     font-weight: 1000;
     opacity: 0.8;
     transition: 0.2s all;
-}
-
-.scroll-to-top:hover {
-    opacity: 1;
 }
 
 .content-wrapper {
@@ -230,44 +223,14 @@ body {
     transition: 0.1s all;
 }
 
-.discord-btn:hover {
-    width: 12%;
-    border-radius: 21px;
-}
-
-.discord-btn:hover .btn-txt {
-    width: 50%;
-    margin: auto 3%;
-}
-
 .github-btn {
     background: #333;
     transition: 0.1s all;
 }
 
-.github-btn:hover {
-    width: 12%;
-    border-radius: 21px;
-}
-
-.github-btn:hover .btn-txt {
-    width: 50%;
-    margin: auto 3%;
-}
-
 .vote-btn {
     background: #f1285a;
     transition: 0.1s all;
-}
-
-.vote-btn:hover {
-    width: 12%;
-    border-radius: 21px;
-}
-
-.vote-btn:hover .btn-txt {
-    width: 50%;
-    margin: auto 3%;
 }
 
 .fa-discord,
@@ -423,18 +386,6 @@ body {
     cursor: pointer;
 }
 
-.command-name {
-    font-size: 2.5em;
-    transition: 0.1s all ease-in-out;
-}
-
-.command-description {
-    display: none;
-    font-size: 1.2rem;
-    text-align: justify;
-    margin-top: 3%;
-}
-
 .command-card:hover {
     -webkit-box-shadow: 0px 0px 12px 1px rgb(83, 178, 255);
     -moz-box-shadow: 0px 0px 12px 1px rgb(83, 178, 255);
@@ -447,6 +398,18 @@ body {
 
 .command-card:hover .command-description {
     display: block;
+}
+
+.command-name {
+    font-size: 2.5em;
+    transition: 0.1s all ease-in-out;
+}
+
+.command-description {
+    display: none;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 3%;
 }
 
 .noresult {
@@ -468,17 +431,18 @@ footer {
     padding-bottom: 1%;
     text-align: center;
     font-size: 1.1rem;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s all;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     color: rgb(255, 95, 95);
-  }
+}
+
 /*================================================================================================*/
 
 /*================================================================================================*/
@@ -495,14 +459,15 @@ footer {
     .mobile-view-icon {
         display: block;
     }
-    .navbar-items
-    {
+
+    .navbar-items {
         font-size: 1.2rem;
     }
-    .second-div
-    {
+
+    .second-div {
         height: 100%;
     }
+
     .bot-details {
         flex-direction: column;
         align-items: center;
@@ -518,8 +483,8 @@ footer {
         margin-top: 4%;
         width: 95%;
     }
-    .cowie-description
-    {
+
+    .cowie-description {
         margin: 2% auto;
         height: 4vh;
     }
@@ -558,24 +523,28 @@ footer {
     .about-image img {
         width: 100%;
     }
-    .features
-    {
+
+    .features {
         flex-direction: column;
         margin: 15% auto;
     }
-    .feature1, .feature2
-    {
+
+    .feature1,
+    .feature2 {
         width: 90%;
         margin: 5% auto;
     }
-    .feature-img-div, .feature-text-div
-    {
+
+    .feature-img-div,
+    .feature-text-div {
         margin: auto 3%;
         text-align: left;
     }
+
     .command-search input {
         width: 95%;
     }
+
     .command-list {
         width: 100%;
         height: 100%;
@@ -592,20 +561,20 @@ footer {
         margin-top: 7%;
         padding: 5%;
     }
-    .command-description
-    {
+    .command-description {
         padding: 3%;
     }
 }
+
 /*================================================================================================*/
 
 /*================================================================================================*/
 /* TABLET VIEW */
 @media (min-width: 481px) and (max-width: 1024px) {
-    .second-div
-    {
+    .second-div {
         height: 100%;
     }
+
     .bot-details {
         flex-direction: column;
         align-items: center;
@@ -621,8 +590,8 @@ footer {
         margin-top: 4%;
         width: 95%;
     }
-    .cowie-description
-    {
+
+    .cowie-description {
         margin: 2% auto;
     }
 
@@ -661,23 +630,27 @@ footer {
     .about-image img {
         width: 100%;
     }
-    .features
-    {
+
+    .features {
         margin: 5% auto;
     }
-    .feature1, .feature2
-    {
+
+    .feature1,
+    .feature2 {
         width: 45%;
         margin: 5% auto;
     }
-    .feature-img-div, .feature-text-div
-    {
+
+    .feature-img-div,
+    .feature-text-div {
         margin: auto 3%;
         text-align: left;
     }
+
     .command-search input {
         width: 95%;
     }
+
     .command-list {
         width: 100%;
         height: 100%;
@@ -694,24 +667,63 @@ footer {
         margin-top: 3%;
         padding: 5%;
     }
-    .command-description
-    {
+
+    .command-description {
         padding: 3%;
     }
 }
+
 /*================================================================================================*/
-
-
 /* CSS FOR INTERSECTION OBSERVER */
-.active
-{
+.active {
     opacity: 1;
     transition: 2.5s all;
 }
-.hidden
-{
+.hidden {
     opacity: 0;
     transition: 2.5s all;
 }
 
-  
+/*================================================================================================*/
+/* ALL HOVER EFFECTS GO HERE */
+@media(hover: hover) {
+
+    .navbar-items a:hover::after {
+        width: 100%;
+    }
+
+    .discord-btn:hover {
+        width: 12%;
+        border-radius: 21px;
+    }
+
+    .scroll-to-top:hover {
+        opacity: 1;
+    }
+
+
+    .discord-btn:hover .btn-txt {
+        width: 50%;
+        margin: auto 3%;
+    }
+
+    .github-btn:hover {
+        width: 12%;
+        border-radius: 21px;
+    }
+
+    .github-btn:hover .btn-txt {
+        width: 50%;
+        margin: auto 3%;
+    }
+
+    .vote-btn:hover {
+        width: 12%;
+        border-radius: 21px;
+    }
+
+    .vote-btn:hover .btn-txt {
+        width: 50%;
+        margin: auto 3%;
+    }
+}
