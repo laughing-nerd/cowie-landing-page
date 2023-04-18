@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Nova+Oval&family=Play&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgb(10, 10, 82) 0%, rgba(1, 0, 37, 1) 100%);
+    --text-color: #ffffff;
+    --connection-color: #ffffff;
+}
+
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+.command-list::-webkit-scrollbar {
+    width: 3px;
+}
+
+.command-list::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+
+body {
+    overflow-x: hidden;
+    color: var(--text-color);
+    background: var(--bg-color);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    font-family: 'Play', sans-seriff;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    list-style: none;
+    height: 5vh;
+    font-size: 1.3rem;
+
+}
+
+.navbar-items a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.navbar-items a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f83e3e;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: 0.1s all;
+}
+
+.navbar-items a:hover::after {
+    width: 100%;
+}
+
+.mobile-view-icon {
+    height: 5vh;
+    font-size: 1.5rem;
+    color: white;
+    display: none;
+    text-align: end;
+    padding-right: 3%;
+    padding-top: 3%;
+}
+
+.hamburger-menu.close,
+.menu-close.close {
+    display: none;
+}
+
+.parent-div {
+    position: relative;
+    height: 0;
+    width: 0;
+    transition: height 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    font-family: 'Play', sans-seriff;
+}
+
+.drop-down-nav-menu {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    list-style: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.parent-div.open {
+    height: 25vh;
+    width: 100%;
+}
+
+.drop-down-nav-menu li {
+    margin: 3% auto;
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    background: rgb(245, 121, 6);
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
+    font-weight: 1000;
+    opacity: 0.8;
+    transition: 0.2s all;
+}
+
+.scroll-to-top:hover {
+    opacity: 1;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*================================================================================================*/
+.first-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 100%;
+}
+
+.bot-details {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bot-image,
+.bot-name {
+    margin: auto 1rem;
+    display: flex;
+    width: 45%;
+}
+
+.bot-image {
+    justify-content: end;
+}
+
+.bot-name {
+    align-items: start;
+    flex-direction: column;
+}
+
+.cowie-image {
+    width: 192px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.cowie-name {
+    font-size: 3rem;
+    font-family: 'Nova Oval', cursive;
+    font-weight: 1000;
+}
+
+.cowie-description {
+    font-size: 1.5rem;
+    height: 1rem;
+    margin-top: 1%;
+    margin-left: 5px;
+}
+
+.bot-links {
+    margin: 3% auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bot-links a {
+    text-decoration: none;
+    margin: auto 1%;
+    width: 4rem;
+    height: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.discord-btn {
+    background: #7289DA;
+    transition: 0.1s all;
+}
+
+.discord-btn:hover {
+    width: 12%;
+    border-radius: 21px;
+}
+
+.discord-btn:hover .btn-txt {
+    width: 50%;
+    margin: auto 3%;
+}
+
+.github-btn {
+    background: #333;
+    transition: 0.1s all;
+}
+
+.github-btn:hover {
+    width: 12%;
+    border-radius: 21px;
+}
+
+.github-btn:hover .btn-txt {
+    width: 50%;
+    margin: auto 3%;
+}
+
+.vote-btn {
+    background: #f1285a;
+    transition: 0.1s all;
+}
+
+.vote-btn:hover {
+    width: 12%;
+    border-radius: 21px;
+}
+
+.vote-btn:hover .btn-txt {
+    width: 50%;
+    margin: auto 3%;
+}
+
+.fa-discord,
+.fa-github,
+.fa-square-poll-vertical {
+    font-size: 2rem;
+}
+
+.btn-txt {
+    display: inline-block;
+    overflow: hidden;
+    width: 0;
+}
+
+/*================================================================================================*/
+
+/*================================================================================================*/
+.second-div {
+    height: 100vh;
+    width: 95%;
+}
+
+.about-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    font-family: 'Play', sans-seriff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.about-text {
+    text-align: justify;
+    font-size: 1.3rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    line-height: 1.3;
+}
+
+.about-text p {
+    margin-bottom: 3%;
+}
+
+.dev {
+    color: #fd7a7a;
+}
+
+.about-image img {
+    width: 700px;
+    aspect-ratio: 859/546;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+}
+
+.feature1,
+.feature2 {
+    width: 27%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 3%;
+}
+
+.feature1 img {
+    width: 75px;
+    aspect-ratio: 0.84/1;
+}
+
+.feature2 img {
+    width: 75px;
+    aspect-ratio: 1;
+}
+
+.feature-img-div,
+.feature-text-div {
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: justify;
+    line-height: 1.3;
+    font-size: 1rem;
+}
+
+/*================================================================================================*/
+
+/*================================================================================================*/
+.third-div {
+    height: 100vh;
+    width: 95%;
+}
+
+.commands-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    font-family: 'Play', sans-seriff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.command-search {
+    display: flex;
+    justify-content: center;
+}
+
+.command-search input {
+    width: 75%;
+    padding: 12px 1%;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.command-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: 80vh;
+    margin-top: 3%;
+}
+
+.command-card {
+    height: 20vh;
+    width: 25%;
+    margin: 3% 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1% 1%;
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 12px 1px rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.command-name {
+    font-size: 2.5em;
+    transition: 0.1s all ease-in-out;
+}
+
+.command-description {
+    display: none;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 3%;
+}
+
+.command-card:hover {
+    -webkit-box-shadow: 0px 0px 12px 1px rgb(83, 178, 255);
+    -moz-box-shadow: 0px 0px 12px 1px rgb(83, 178, 255);
+    box-shadow: 0px 0px 12px 1px rgb(83, 178, 255);
+}
+
+.command-card:hover .command-name {
+    display: none;
+}
+
+.command-card:hover .command-description {
+    display: block;
+}
+
+.noresult {
+    color: #e94646;
+    font-size: 3rem;
+    text-shadow: 0px 0px 0px 10px white;
+}
+
+.noshow {
+    display: none;
+}
+
+/*================================================================================================*/
+footer {
+    /* background-color: #333; */
+    background: transparent;
+    color: #fff;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s all;
+  }
+  
+  footer a:hover {
+    color: rgb(255, 95, 95);
+  }
+/*================================================================================================*/
+
+/*================================================================================================*/
+/* MOBILE VIEW */
+@media (max-width: 480px) {
+    .navbar {
+        display: none;
+    }
+
+    .drop-down-nav-menu.open {
+        display: block;
+    }
+
+    .mobile-view-icon {
+        display: block;
+    }
+    .navbar-items
+    {
+        font-size: 1.2rem;
+    }
+    .second-div
+    {
+        height: 100%;
+    }
+    .bot-details {
+        flex-direction: column;
+        align-items: center;
+        margin: 5% auto;
+    }
+
+    .bot-image {
+        justify-content: center;
+    }
+
+    .bot-name {
+        align-items: center;
+        margin-top: 4%;
+        width: 95%;
+    }
+    .cowie-description
+    {
+        margin: 2% auto;
+        height: 4vh;
+    }
+
+    .bot-links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3% auto;
+    }
+
+    .bot-links a {
+        margin: 3% auto;
+        width: 75%;
+        border-radius: 12px;
+    }
+
+    .discord-btn {
+        width: 50%;
+    }
+
+    .btn-txt {
+        width: 50%;
+        margin: auto 3%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .about-image {
+        margin: 2% auto;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+    .features
+    {
+        flex-direction: column;
+        margin: 15% auto;
+    }
+    .feature1, .feature2
+    {
+        width: 90%;
+        margin: 5% auto;
+    }
+    .feature-img-div, .feature-text-div
+    {
+        margin: auto 3%;
+        text-align: left;
+    }
+    .command-search input {
+        width: 95%;
+    }
+    .command-list {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        overflow-y: auto;
+        justify-content: start;
+        flex-wrap: nowrap;
+        margin: 10% auto;
+    }
+
+    .command-card {
+        width: 80%;
+        height: 35%;
+        margin-top: 7%;
+        padding: 5%;
+    }
+    .command-description
+    {
+        padding: 3%;
+    }
+}
+/*================================================================================================*/
+
+/*================================================================================================*/
+/* TABLET VIEW */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .second-div
+    {
+        height: 100%;
+    }
+    .bot-details {
+        flex-direction: column;
+        align-items: center;
+        margin: 5% auto;
+    }
+
+    .bot-image {
+        justify-content: center;
+    }
+
+    .bot-name {
+        align-items: center;
+        margin-top: 4%;
+        width: 95%;
+    }
+    .cowie-description
+    {
+        margin: 2% auto;
+    }
+
+    .bot-links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bot-links a {
+        margin: 1% auto;
+        width: 50%;
+        border-radius: 12px;
+        text-transform: uppercase;
+        font-weight: 1000;
+    }
+
+    .discord-btn {
+        width: 50%;
+    }
+
+    .btn-txt {
+        width: 50%;
+        margin: auto 3%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .about-image {
+        margin: 2% auto;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+    .features
+    {
+        margin: 5% auto;
+    }
+    .feature1, .feature2
+    {
+        width: 45%;
+        margin: 5% auto;
+    }
+    .feature-img-div, .feature-text-div
+    {
+        margin: auto 3%;
+        text-align: left;
+    }
+    .command-search input {
+        width: 95%;
+    }
+    .command-list {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        overflow-y: auto;
+        justify-content: start;
+        flex-wrap: nowrap;
+        margin: 5% auto;
+    }
+
+    .command-card {
+        width: 80%;
+        height: 35%;
+        margin-top: 3%;
+        padding: 5%;
+    }
+    .command-description
+    {
+        padding: 3%;
+    }
+}
+/*================================================================================================*/
+
+
+/* CSS FOR INTERSECTION OBSERVER */
+.active
+{
+    opacity: 1;
+    transition: 2.5s all;
+}
+.hidden
+{
+    opacity: 0;
+    transition: 2.5s all;
+}
+
+  

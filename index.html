@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="This is Cowie, an anime discord bot. It can post random anime clips, images, memes and can even play music. Make sure to try out Cowie and join our Community server">
+    <meta name="keywords" content="discord bot, discord, anime, anime discord bot, music, anime clips, anime memes">
+    <title>Cowie | Discord Bot</title>
+    <link rel="shortcut icon" href="./assets/cowie-image.jpg" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-items"><a href="#about">About</a></li>
+            <li class="navbar-items"><a href="#commands">Commands</a></li>
+            <li class="navbar-items"><a href="https://discord.gg/WGzUny3guE" target="_blank">Join Community</a></li>
+            <!-- <li class="navbar-items"><a href="#">Buy me a Coffee</a></li> -->
+        </ul>
+    </div>
+
+    <div class="mobile-view-icon">
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu-close close">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+    </div>
+
+    <div class="parent-div">
+        <div class="drop-down-nav-menu">
+            <li class="navbar-items"><a href="#about">About</a></li>
+            <li class="navbar-items"><a href="#commands">Commands</a></li>
+            <li class="navbar-items"><a href="https://discord.gg/WGzUny3guE" target="_blank">Join Community</a></li>
+            <!-- <li class="navbar-items"><a href="#">Buy me a Coffee</a></li> -->
+        </div>
+    </div>
+    <div class="scroll-to-top" onclick="document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;" title="Back to top">
+        &uarr;
+    </div>
+    <div class="content-wrapper">
+
+        <div class="first-div wrapper-child hidden">
+            <div class="bot-details">
+                <div class="bot-image">
+                    <img src="./assets/cowie-image.jpg" alt="Cowie" class="cowie-image">
+                </div>
+                <div class="bot-name">
+                    <div class="cowie-name">Cowie</div>
+                    <div class="cowie-description"></div>
+                </div>
+            </div>
+            <div class="bot-links">
+                <a href="https://discord.com/api/oauth2/authorize?client_id=998632759339794632&permissions=8&scope=bot"
+                    target="_blank" class="discord-btn" title="Add Cowie to your discord servers">
+                    <i class="fa-brands fa-discord"></i>
+                    <div class="btn-txt">Add to discord</div>
+                </a>
+                <a href="https://github.com/laughing-nerd/Cowie" target="_blank" class="github-btn"
+                    title="If you like Cowie, then please consider starring the respository on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="btn-txt">GitHub Repo</div>
+                </a>
+                <a href="https://top.gg/bot/998632759339794632/vote" target="_blank" class="vote-btn"
+                    title="Vote for Cowie on top.gg">
+                    <i class="fa-solid fa-square-poll-vertical"></i>
+                    <div class="btn-txt">Vote on top.gg</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="second-div wrapper-child hidden" id="about">
+            <div class="about-heading">
+                About&nbsp;&nbsp;Cowie
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Cowie is a versatile anime bot for Discord built with the intention of catching the attention of
+                        anime enthusiasts. It can post random anime images, clips, quotes and can even play music. Yes!
+                        You heard it right! Cowie can play music despite being an anime bot. It does not have moderation
+                        features yet. But I am working on it and will be implemented. Given its extensive features,
+                        Cowie is a bot that you shouldn't miss out on for your Discord servers.</p>
+                    <p>I am <span class="dev">mohade_jr#6593</span>, and I developed Cowie. It was October 2022 when I
+                        finally completed its
+                        development and released the bot for public use. Cowie is one of my hobby projects, and I
+                        cherish it. I will update the bot based on user feedback and requests. So, make sure that you
+                        join Cowie's community server and become a part of the cause that will one day make Cowie one of
+                        the best Discord bots on this planet.</p>
+                </div>
+                <div class="about-image">
+                    <img src="./assets/about-img.png" alt="About Image">
+                </div>
+            </div>
+            <div class="features">
+                <div class="feature1">
+                    <div class="feature-img-div">
+                        <img src="./assets/f1.png" alt="">
+                    </div>
+                    <div class="feature-text-div">
+                        Content, that will keep anime enthusiasts hooked with this bot. (That includes NSFW content as
+                        well &#x1f92b;)
+                    </div>
+                </div>
+                <div class="feature2">
+                    <div class="feature-img-div">
+                        <img src="./assets/f2.png" alt="">
+                    </div>
+                    <div class="feature-text-div">
+                        Cowie offers top-notch music quality that you will undoubtedly enjoy on Discord.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="third-div wrapper-child hidden" id="commands">
+            <div class="commands-heading">
+                Commands
+            </div>
+            <div class="command-search">
+                <input type="text" placeholder="&#128269; Search for a command here" onkeyup="searchCommand(this)">
+            </div>
+            <div class="command-list">
+                <!-- This div will contain the list of commands and will be updated by index.js -->
+                <div class="noresult noshow">No such command exists :(</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Made with &#x2764; by <a href="https://www.github.com/laughing-nerd" target="_blank">@mohade_jr#6593</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="index.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/429bd6cd3a.js"></script>
+</body>
+
+</html>
