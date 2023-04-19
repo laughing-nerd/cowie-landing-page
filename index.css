@@ -14,14 +14,13 @@
 }
 
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, .command-description::-webkit-scrollbar {
     width: 0px;
 }
 
 .command-list::-webkit-scrollbar {
     width: 3px;
 }
-
 .command-list::-webkit-scrollbar-thumb {
     background: red;
     border-radius: 10px;
@@ -409,7 +408,8 @@ body {
     display: none;
     font-size: 1.2rem;
     text-align: justify;
-    margin-top: 3%;
+    padding: 3%;
+    overflow-y: auto;
 }
 
 .noresult {
