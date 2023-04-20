@@ -463,10 +463,11 @@ footer a:hover {
     .navbar-items {
         font-size: 1.2rem;
     }
-
     .second-div {
         height: 100%;
+        border: 1px solid red;
     }
+
 
     .bot-details {
         flex-direction: column;

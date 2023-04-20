@@ -125,6 +125,17 @@ const observer = new IntersectionObserver((entries, observer) => {
         }
     });
 });
-for (let i=0;i<components.length; i++)
+for (let i = 0; i < components.length; i++)
     observer.observe(components[i]);
+
+
+//Scrolls to a particular div
+const scrollToDiv = (parameter) => {
+    const div = document.getElementById(parameter);
+    const offset = div.offsetTop;
+    scrollTo({
+        top: offset,
+        behavior: 'smooth'
+    });
+}
 
