@@ -15,7 +15,7 @@ const commands = {
     "-waifu-nsfw": "Posts nsfw waifu pictures",
     "-neko-nsfw": "Posts nsfw neko pictures"
 }
-const description_text = ["Hello Senpai!", "I am a discord bot", "Watching over 50+ servers", "Listening to -help on discord", "And I like pancakes :D"];
+const description_text = ["Hello Senpai!", "I am a discord bot", "Watching over 60+ servers", "Listening to -help on discord", "And I like pancakes :D"];
 const speed = 100;
 const waitTime = 1000;
 
