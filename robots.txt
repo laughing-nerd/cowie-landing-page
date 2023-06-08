@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cowie.netlify.app/sitemap.xml
