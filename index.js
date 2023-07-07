@@ -1,20 +1,30 @@
 //List of commands
 const commands = {
-    "-waifu": "Posts waifu pictures",
-    "-neko": "Posts neko pictures",
-    "-quote": "Posts random anime qutoes along with anime name and character name",
-    "-meme": "Posts random anime memes from reddit",
-    "-cute": "Posts random cute gifs",
-    "-play": "Plays a song. If no song name is provided then it will play a random anime music<br><br><i>-play SongName</i>",
-    "-skip": "Skips the current song or jump to a specific song in the queue<br><br><i>-skip</i> &rarr; simply skip the current song<br><i>-skip n</i> &rarr; skips to the nth song in the queue<br><i>-skip -1</i> &rarr; jump back to the previous song in the queue",
-    "-pause": "Pauses the current song",
-    "-resume": "Resumes the currently paused song",
-    "-stop": "Stops the current song",
-    "-repeat": "Repeats the current song or queue. It has 3 modes<br><br><i>-repeat 1</i> &rarr; Repeat the current song<br><i>-repeat 2</i> &rarr; Repeat the current queue<br><i>-repeat 3</i> &rarr; Stop repeating the song or queue",
-    "-queue": "Shows the current queue",
-    "-waifu-nsfw": "Posts nsfw waifu pictures",
-    "-neko-nsfw": "Posts nsfw neko pictures"
-}
+  "-airkiss": "Sends an airkiss to a user<br>Example: -airkiss @user",
+  "-brofist": "Gives a brofist to a user<br>Example: -brofist @user",
+  "-cute": "Posts random cute gifs",
+  "-help": "Help command",
+  "-hug": "Hugs a user<br>Example: -hug @user",
+  "-kiss": "Kisses a user<br>Example: -hug @user",
+  "-meme": "Posts random anime memes from reddit",
+  "-neko": "Posts neko pictures",
+  "-nsfw": "Posts nsfw pictures",
+  "-pause": "Pauses the current song",
+  "-pat": "Pats a user<br>Example: -pat @user",
+  "-pickup": "Gives a random pickup line. You can also mention someone to dedicate a random pickup line to them<br>Example: -pickup @user"
+  "-play": "Plays a song. If no song name is provided then it will play a random anime music<br><br><i>-play SongName</i>",
+  "-poke": "Poke a user<br>Example: -poke @user",
+  "-queue": "Shows the current music queue",
+  "-quote": "Posts random anime qutoes along with anime name and character name",
+  "-repeat": "Repeats the current song or queue. It has 3 modes<br><br><i>-repeat 1</i> &rarr; Repeat the current song<br><i>-repeat 2</i> &rarr; Repeat the current queue<br><i>-repeat 3</i> &rarr; Stop repeating the song or queue",
+  "-resume": "Resumes the currently paused song",
+  "-skip": "Skips the current song or jump to a specific song in the queue<br><br><i>-skip</i> &rarr; simply skip the current song<br><i>-skip n</i> &rarr; skips to the nth song in the queue<br><i>-skip -1</i> &rarr; jump back to the previous song in the queue",
+  "-slap": "Slaps a user<br>Example: -slap @user",
+  "-stop": "Stops the current song",
+  "-suggest": "Gives a random anime suggestion",
+  "-tickle": "Tickles a user<br>Example: -tickle @user",
+  "-waifu": "Posts waifu pictures",
+};
 const description_text = ["Hello Senpai!", "I am a discord bot", "Watching over 60+ servers", "Listening to -help on discord", "And I like pancakes :D"];
 const speed = 100;
 const waitTime = 1000;
