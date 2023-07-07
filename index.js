@@ -11,7 +11,7 @@ const commands = {
   "-nsfw": "Posts nsfw pictures",
   "-pause": "Pauses the current song",
   "-pat": "Pats a user<br>Example: -pat @user",
-  "-pickup": "Gives a random pickup line. You can also mention someone to dedicate a random pickup line to them<br>Example: -pickup @user"
+  "-pickup": "Gives a random pickup line. You can also mention someone to dedicate a random pickup line to them<br>Example: -pickup @user",
   "-play": "Plays a song. If no song name is provided then it will play a random anime music<br><br><i>-play SongName</i>",
   "-poke": "Poke a user<br>Example: -poke @user",
   "-queue": "Shows the current music queue",
